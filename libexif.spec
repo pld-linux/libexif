@@ -1,15 +1,19 @@
 Summary:	Library for parsing EXIF files from digital cameras
 Summary(pl):	Biblioteka do czytania plików EXIF z kamer cyfrowych
 Name:		libexif
-Version:	0.6.10
+Version:	0.6.11
 Release:	1
 Epoch:		1
 License:	MIT
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/libexif/%{name}-%{version}.tar.gz
-# Source0-md5:	f8a7cf1f083628b78a07dca17cbc6b8b
+Source0:	http://dl.sourceforge.net/libexif/%{name}-%{version}.tar.bz2
+# Source0-md5:	211996a336f1b1a06def5a6d5c94284e
+Patch0:		%{name}-gettext.patch
 URL:		http://libexif.sourceforge.net/
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
+BuildRequires:	gettext-devel
+BuildRequires:	libtool
 Obsoletes:	libexif7
 Obsoletes:	libmnote
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -53,9 +57,15 @@ Statyczna wersja libexif.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-cp -f /usr/share/automake/config.sub .
+%{__gettextize}
+%{__libtoolize}
+%{__aclocal} -I m4
+%{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure
 
 %{__make}
@@ -66,7 +76,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%find_lang %{name}
+%find_lang %{name}-12
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -74,7 +84,7 @@ rm -rf $RPM_BUILD_ROOT
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
 
-%files -f %{name}.lang
+%files -f %{name}-12.lang
 %defattr(644,root,root,755)
 %doc README ChangeLog
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
