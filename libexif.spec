@@ -26,7 +26,7 @@ EXIF pozwala czytaæ informacje z tych znaczników.
 Summary:	Header files for libexif
 Summary(pl):	Pliki nag³ówkowe dla libexif
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{epoch}:%{version}
 Obsoletes:	libexif7-devel
 
 %description devel
@@ -39,7 +39,7 @@ Pliki nag³ówkowe dla libexif.
 Summary:	Static version of libexif
 Summary(pl):	Statyczna wersja libexif
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name}-devel = %{epoch}:%{version}
 
 %description static
 Static version of libexif.
