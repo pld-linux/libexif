@@ -6,7 +6,7 @@ Release:	1
 Epoch:		1
 License:	MIT
 Group:		Libraries
-Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/libexif/%{name}-%{version}.tar.bz2
+Source0:	http://dl.sourceforge.net/libexif/%{name}-%{version}.tar.bz2
 URL:		http://libexif.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	libexif7
