@@ -2,7 +2,7 @@ Summary:	Library for parsing EXIF files from digital cameras
 Summary(pl):	Biblioteka do czytania plików EXIF z kamer cyfrowych
 Name:		libexif
 Version:	0.5.3
-Release:	1
+Release:	2
 Epoch:		1
 License:	MIT
 Group:		Libraries
