@@ -1,22 +1,23 @@
 Summary:	Library for parsing EXIF files from digital cameras
 Summary(pl):	Biblioteka do czytania plików EXIF z kamer cyfrowych
 Name:		libexif
-Version:	0.5.12
-Release:	2
+Version:	0.6.9
+Release:	1
 Epoch:		1
 License:	MIT
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/libexif/%{name}-%{version}.tar.gz
-# Source0-md5:	97e17fa05cb638eed5e8e59db431ed3a
+# Source0-md5:	0aa142335a8a00c32bb6c7dbfe95fc24
 URL:		http://libexif.sourceforge.net/
 BuildRequires:	automake
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	libexif7
+Obsoletes:	libmnote
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Most digital cameras produce EXIF files, which are JPEG files with extra
-tags that contain information about the image. The EXIF library allows
-you to parse an EXIF file and read the data from those tags.
+Most digital cameras produce EXIF files, which are JPEG files with
+extra tags that contain information about the image. The EXIF library
+allows you to parse an EXIF file and read the data from those tags.
 
 %description -l pl
 Wiêkszo¶æ kamer cyfrowych tworzy pliki EXIF, które s± JPEGami z
@@ -27,8 +28,9 @@ EXIF pozwala czytaæ informacje z tych znaczników.
 Summary:	Header files for libexif
 Summary(pl):	Pliki nag³ówkowe dla libexif
 Group:		Development/Libraries
-Requires:	%{name} = %{epoch}:%{version}
+Requires:	%{name} = %{epoch}:%{version}-%{release}
 Obsoletes:	libexif7-devel
+Obsoletes:	libmnote-devel
 
 %description devel
 Header files for libexif.
@@ -40,7 +42,8 @@ Pliki nag³ówkowe dla libexif.
 Summary:	Static version of libexif
 Summary(pl):	Statyczna wersja libexif
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{epoch}:%{version}
+Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
+Obsoletes:	libmnote-static
 
 %description static
 Static version of libexif.
@@ -74,15 +77,15 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc README ChangeLog
-%attr(755,root,root) %{_libdir}/*.so.*.*.*
+%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%{_libdir}/*.la
-%attr(755,root,root) %{_libdir}/*.so
+%attr(755,root,root) %{_libdir}/lib*.so
+%{_libdir}/lib*.la
 %{_includedir}/%{name}
-%{_pkgconfigdir}/*
+%{_pkgconfigdir}/*.pc
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/*.a
+%{_libdir}/lib*.a
