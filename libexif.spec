@@ -4,7 +4,7 @@ Name:		libexif
 Version:	0.5.3
 Release:	1
 Epoch:		1
-License:	MIT license
+License:	MIT
 Group:		Libraries
 Source0:	http://prdownloads.sourceforge.net/libexif/%{name}-%{version}.tar.bz2
 URL:		http://libexif.sourceforge.net/
