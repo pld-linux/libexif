@@ -1,13 +1,13 @@
 Summary:	Library for parsing EXIF files from digital cameras
 Summary(pl):	Biblioteka do czytania plików EXIF z kamer cyfrowych
 Name:		libexif
-Version:	0.5.9
+Version:	0.5.10
 Release:	1
 Epoch:		1
 License:	MIT
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/libexif/%{name}-%{version}.tar.bz2
-# Source0-md5: b9377b8a9cb1dca7ab83df25fc72f33e
+# Source0-md5:	ba5fa89838abaf876ef5840c8a2d413b
 URL:		http://libexif.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	libexif7
@@ -58,9 +58,10 @@ Statyczna wersja libexif.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
-%find_lang %{name}-8
+%find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -68,7 +69,7 @@ rm -rf $RPM_BUILD_ROOT
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
 
-%files -f %{name}-8.lang
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc README ChangeLog
 %attr(755,root,root) %{_libdir}/*.so.*.*.*
