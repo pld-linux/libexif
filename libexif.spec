@@ -6,7 +6,8 @@ Release:	2
 Epoch:		1
 License:	MIT
 Group:		Libraries
-Source0:	http://prdownloads.sourceforge.net/libexif/%{name}-%{version}.tar.bz2
+Source0:	http://dl.sourceforge.net/libexif/%{name}-%{version}.tar.bz2
+# Source0-md5:	70f449b70fab2de9644ff04b963e7470
 URL:		http://libexif.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
