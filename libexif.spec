@@ -9,6 +9,8 @@ Group:		Libraries
 Source0:	http://dl.sourceforge.net/libexif/%{name}-%{version}.tar.gz
 # Source0-md5:	97e17fa05cb638eed5e8e59db431ed3a
 URL:		http://libexif.sourceforge.net/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	libexif7
 
@@ -51,6 +53,10 @@ Statyczna wersja libexif.
 %setup -q
 
 %build
+#%{__aclocal}
+#%{__autoconf}
+#%{__automake}
+cp -f /usr/share/automake/config.sub .
 %configure
 
 %{__make}
