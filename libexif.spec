@@ -8,6 +8,7 @@ License:	MIT
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/libexif/%{name}-%{version}.tar.bz2
 # Source0-md5:	9f952ee8db0be7c53a075c34e8286d91
+Patch0:		%{name}-gcc4.patch
 URL:		http://libexif.sourceforge.net/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.8
@@ -56,6 +57,7 @@ Statyczna wersja libexif.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__gettextize}
