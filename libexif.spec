@@ -1,15 +1,17 @@
 Summary:	Library for parsing EXIF files from digital cameras
 Summary(pl):	Biblioteka do czytania plików EXIF z kamer cyfrowych
 Name:		libexif
-Version:	0.5.3
+Version:	0.5.4
 Release:	1
 License:	MIT license
 Group:		Libraries
-Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/libexif/%{name}-%{version}.tar.bz2
+Source0:	http://prdownloads.sourceforge.net/libexif/%{name}-%{version}.tar.bz2
 URL:		http://libexif.sourceforge.net/
-#BuildRequires:	autoconf
-#BuildRequires:	automake
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Obsoletes:	libexif7
 
 %description
 Most digital cameras produce EXIF files, which are JPEG files with extra
@@ -26,6 +28,7 @@ Summary:	Header files for libexif
 Summary(pl):	Pliki nag³ówkowe dla libexif
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
+Obsoletes:	libexif7-devel
 
 %description devel
 Header files for libexif.
@@ -49,10 +52,11 @@ Statyczna wersja libexif.
 %setup -q
 
 %build
-#rm -f missing
-#aclocal
-#%{__autoconf}
-#%{__automake}
+rm -f missing
+%{__libtoolize}
+aclocal
+%{__autoconf}
+%{__automake}
 %configure
 
 %{__make}
