@@ -1,3 +1,4 @@
+%bcond_without	static_libs	# don't build static library
 Summary:	Library for parsing EXIF files from digital cameras
 Summary(pl):	Biblioteka do czytania plików EXIF z kamer cyfrowych
 Name:		libexif
@@ -73,7 +74,8 @@ rm -f po/stamp-po
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure
+%configure \
+	%{!?with_static_libs:--disable-static}
 
 %{__make}
 
@@ -103,6 +105,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/%{name}
 %{_pkgconfigdir}/*.pc
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/lib*.a
+%endif
