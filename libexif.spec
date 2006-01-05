@@ -1,22 +1,22 @@
+#
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	Library for parsing EXIF files from digital cameras
 Summary(pl):	Biblioteka do czytania plików EXIF z kamer cyfrowych
 Name:		libexif
-Version:	0.6.12
-Release:	3
+Version:	0.6.13
+Release:	1
 Epoch:		1
 License:	MIT
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/libexif/%{name}-%{version}.tar.bz2
-# Source0-md5:	9f952ee8db0be7c53a075c34e8286d91
-Source1:	%{name}-pl.po
-Patch0:		%{name}-gcc4.patch
-Patch1:		%{name}-segv.patch
+# Source0-md5:	1b1e2b495c5aa20c08725f30545a110b
+Patch0:		%{name}-pl.po-update.patch
 URL:		http://libexif.sourceforge.net/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.8
+BuildRequires:	doxygen
 BuildRequires:	gettext-devel >= 0.14.1
 BuildRequires:	libtool
 Obsoletes:	libexif7
@@ -60,19 +60,27 @@ Static version of libexif.
 %description static -l pl
 Statyczna wersja libexif.
 
+%package apidocs
+Summary:	libexif API documentation
+Summary(pl):	Dokumentacja API biblioteki libexif
+Group:		Documentation
+
+%description apidocs
+API and internal documentation for libexif library.
+
+%description apidocs -l pl
+Dokumentacja API oraz wewnêtrzna dla biblioteki libexif.
+
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 
-cp %{SOURCE1} po/pl.po
-%{__perl} -pi -e 's/de es fr/de es fr pl/' configure.in
 rm -f po/stamp-po
 
 %build
 %{__gettextize}
 %{__libtoolize}
-%{__aclocal} -I m4
+%{__aclocal} -I m4m
 %{__autoconf}
 %{__autoheader}
 %{__automake}
@@ -86,6 +94,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+rm -rf $RPM_BUILD_ROOT%{_docdir}/libexif
 
 %find_lang %{name}-12
 
@@ -112,3 +122,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_libdir}/lib*.a
 %endif
+
+%files apidocs
+%defattr(644,root,root,755)
+%doc doc/doxygen-output/libexif*
