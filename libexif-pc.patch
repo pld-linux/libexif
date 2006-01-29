@@ -1,8 +1,0 @@
---- libexif-0.6.13/libexif/libexif.pc.in.orig	2005-03-17 16:58:18.000000000 +0100
-+++ libexif-0.6.13/libexif/libexif.pc.in	2006-01-29 17:00:16.000000000 +0100
-@@ -8,4 +8,4 @@
- Requires:
- Version: @VERSION@
- Libs: -L${libdir} -lexif -lm
--Cflags: -I${includedir}
-+Cflags: -I${includedir}/libexif
