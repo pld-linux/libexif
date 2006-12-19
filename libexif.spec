@@ -93,7 +93,8 @@ rm -f po/stamp-po
 %configure \
 	%{!?with_static_libs:--disable-static}
 
-%{__make}
+# docs generation fails with -jN>1
+%{__make} -j1
 
 %install
 rm -rf $RPM_BUILD_ROOT
