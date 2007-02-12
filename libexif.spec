@@ -7,7 +7,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	Library for parsing EXIF files from digital cameras
-Summary(pl):	Biblioteka do czytania plików EXIF z kamer cyfrowych
+Summary(pl.UTF-8):   Biblioteka do czytania plikÃ³w EXIF z kamer cyfrowych
 Name:		libexif
 Version:	0.6.13
 Release:	4
@@ -33,14 +33,14 @@ Most digital cameras produce EXIF files, which are JPEG files with
 extra tags that contain information about the image. The EXIF library
 allows you to parse an EXIF file and read the data from those tags.
 
-%description -l pl
-Wiêkszo¶æ kamer cyfrowych tworzy pliki EXIF, które s± JPEGami z
-dodatkowymi znacznikami zawieraj±cymi informacje o obrazie. Biblioteka
-EXIF pozwala czytaæ informacje z tych znaczników.
+%description -l pl.UTF-8
+WiÄ™kszoÅ›Ä‡ kamer cyfrowych tworzy pliki EXIF, ktÃ³re sÄ… JPEGami z
+dodatkowymi znacznikami zawierajÄ…cymi informacje o obrazie. Biblioteka
+EXIF pozwala czytaÄ‡ informacje z tych znacznikÃ³w.
 
 %package devel
 Summary:	Header files for libexif
-Summary(pl):	Pliki nag³ówkowe dla libexif
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe dla libexif
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Obsoletes:	libexif7-devel
@@ -49,12 +49,12 @@ Obsoletes:	libmnote-devel
 %description devel
 Header files for libexif.
 
-%description devel -l pl
-Pliki nag³ówkowe dla libexif.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe dla libexif.
 
 %package static
 Summary:	Static version of libexif
-Summary(pl):	Statyczna wersja libexif
+Summary(pl.UTF-8):   Statyczna wersja libexif
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 Obsoletes:	libmnote-static
@@ -62,19 +62,19 @@ Obsoletes:	libmnote-static
 %description static
 Static version of libexif.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna wersja libexif.
 
 %package apidocs
 Summary:	libexif API documentation
-Summary(pl):	Dokumentacja API biblioteki libexif
+Summary(pl.UTF-8):   Dokumentacja API biblioteki libexif
 Group:		Documentation
 
 %description apidocs
 API and internal documentation for libexif library.
 
-%description apidocs -l pl
-Dokumentacja API oraz wewnêtrzna dla biblioteki libexif.
+%description apidocs -l pl.UTF-8
+Dokumentacja API oraz wewnÄ™trzna dla biblioteki libexif.
 
 %prep
 %setup -q
