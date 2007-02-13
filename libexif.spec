@@ -7,7 +7,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	Library for parsing EXIF files from digital cameras
-Summary(pl.UTF-8):   Biblioteka do czytania plików EXIF z kamer cyfrowych
+Summary(pl.UTF-8):	Biblioteka do czytania plików EXIF z kamer cyfrowych
 Name:		libexif
 Version:	0.6.13
 Release:	4
@@ -40,7 +40,7 @@ EXIF pozwala czytać informacje z tych znaczników.
 
 %package devel
 Summary:	Header files for libexif
-Summary(pl.UTF-8):   Pliki nagłówkowe dla libexif
+Summary(pl.UTF-8):	Pliki nagłówkowe dla libexif
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Obsoletes:	libexif7-devel
@@ -54,7 +54,7 @@ Pliki nagłówkowe dla libexif.
 
 %package static
 Summary:	Static version of libexif
-Summary(pl.UTF-8):   Statyczna wersja libexif
+Summary(pl.UTF-8):	Statyczna wersja libexif
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 Obsoletes:	libmnote-static
@@ -67,7 +67,7 @@ Statyczna wersja libexif.
 
 %package apidocs
 Summary:	libexif API documentation
-Summary(pl.UTF-8):   Dokumentacja API biblioteki libexif
+Summary(pl.UTF-8):	Dokumentacja API biblioteki libexif
 Group:		Documentation
 
 %description apidocs
