@@ -1,5 +1,5 @@
---- libexif-0.6.14/po/pl.po.orig	2007-05-10 16:33:27.000000000 +0200
-+++ libexif-0.6.14/po/pl.po	2007-05-16 00:03:03.599092031 +0200
+--- libexif-0.6.15/po/pl.po.orig	2007-05-22 01:29:36.000000000 +0200
++++ libexif-0.6.15/po/pl.po	2007-05-26 19:58:31.843205721 +0200
 @@ -1,14 +1,14 @@
  # Polish translation for libexif.
  # Copyright (C) 2006 Free Software Foundation, Inc.
@@ -10,15 +10,15 @@
  msgid ""
  msgstr ""
 -"Project-Id-Version: libexif 0.6.13\n"
-+"Project-Id-Version: libexif 0.6.14\n"
++"Project-Id-Version: libexif 0.6.15\n"
  "Report-Msgid-Bugs-To: \n"
- "POT-Creation-Date: 2007-05-10 15:58+0200\n"
+ "POT-Creation-Date: 2007-05-21 15:49+0200\n"
 -"PO-Revision-Date: 2006-01-05 18:20+0100\n"
-+"PO-Revision-Date: 2007-05-15 22:14+0200\n"
++"PO-Revision-Date: 2007-05-26 19:42+0200\n"
  "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
  "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
  "MIME-Version: 1.0\n"
-@@ -56,21 +56,20 @@
+@@ -61,22 +61,21 @@
  
  #: libexif/canon/mnote-canon-entry.c:77
  msgid "Economy"
@@ -33,6 +33,7 @@
  
  #: libexif/canon/mnote-canon-entry.c:80
  #: libexif/olympus/mnote-olympus-entry.c:132
+ #: libexif/pentax/mnote-pentax-entry.c:140
  msgid "RAW"
 -msgstr ""
 +msgstr "RAW"
@@ -44,16 +45,16 @@
  
  #: libexif/canon/mnote-canon-entry.c:82 libexif/canon/mnote-canon-entry.c:257
  #: libexif/canon/mnote-canon-entry.c:260 libexif/canon/mnote-canon-entry.c:268
-@@ -95,7 +94,7 @@
- #: libexif/canon/mnote-canon-entry.c:299 libexif/canon/mnote-canon-entry.c:313
- #: libexif/canon/mnote-canon-entry.c:323
+@@ -110,7 +109,7 @@
+ #: libexif/pentax/mnote-pentax-entry.c:197
+ #: libexif/pentax/mnote-pentax-entry.c:260
  msgid "On"
 -msgstr ""
 +msgstr "Włączony"
  
  #: libexif/canon/mnote-canon-entry.c:85
  #: libexif/olympus/mnote-olympus-entry.c:146
-@@ -103,24 +102,20 @@
+@@ -118,24 +117,20 @@
  msgstr "Redukcja czerwonych oczu"
  
  #: libexif/canon/mnote-canon-entry.c:86
@@ -82,7 +83,7 @@
  
  #: libexif/canon/mnote-canon-entry.c:90 libexif/canon/mnote-canon-entry.c:100
  #: libexif/canon/mnote-canon-entry.c:250
-@@ -134,81 +129,68 @@
+@@ -149,81 +144,68 @@
  
  #: libexif/canon/mnote-canon-entry.c:92
  msgid "Movie"
@@ -179,7 +180,7 @@
  
  #: libexif/canon/mnote-canon-entry.c:111 libexif/canon/mnote-canon-entry.c:165
  #: libexif/canon/mnote-canon-entry.c:187 libexif/canon/mnote-canon-entry.c:241
-@@ -224,23 +206,20 @@
+@@ -244,23 +226,20 @@
  msgstr "Pejzaż"
  
  #: libexif/canon/mnote-canon-entry.c:113
@@ -206,8 +207,8 @@
 +msgstr "Odcienie szarości"
  
  #: libexif/canon/mnote-canon-entry.c:117 libexif/canon/mnote-canon-entry.c:264
- #: libexif/pentax/mnote-pentax-entry.c:115
-@@ -258,18 +237,16 @@
+ #: libexif/pentax/mnote-pentax-entry.c:127
+@@ -281,18 +260,16 @@
  
  #: libexif/canon/mnote-canon-entry.c:121 libexif/canon/mnote-canon-entry.c:265
  #: libexif/canon/mnote-canon-entry.c:287
@@ -227,8 +228,8 @@
 +msgstr "Neutralne"
  
  #: libexif/canon/mnote-canon-entry.c:125
- #: libexif/pentax/mnote-pentax-entry.c:80
-@@ -277,62 +254,56 @@
+ #: libexif/pentax/mnote-pentax-entry.c:92
+@@ -300,66 +277,60 @@
  msgstr "Flesz wyłączony"
  
  #: libexif/canon/mnote-canon-entry.c:126
@@ -255,6 +256,7 @@
 +msgstr "Pomieszczenie"
  
  #: libexif/canon/mnote-canon-entry.c:130
+ #: libexif/pentax/mnote-pentax-entry.c:174
  msgid "Fireworks"
 -msgstr ""
 +msgstr "Fajerwerki"
@@ -265,6 +267,9 @@
 +msgstr "Plaża"
  
  #: libexif/canon/mnote-canon-entry.c:132 libexif/canon/mnote-canon-entry.c:296
+ #: libexif/pentax/mnote-pentax-entry.c:186
+ #: libexif/pentax/mnote-pentax-entry.c:288
+ #: libexif/pentax/mnote-pentax-entry.c:294
 -#, fuzzy
  msgid "Underwater"
 -msgstr "Dobra pogoda"
@@ -304,7 +309,7 @@
  
  #: libexif/canon/mnote-canon-entry.c:139 libexif/canon/mnote-canon-entry.c:300
  #: libexif/canon/mnote-canon-entry.c:317
-@@ -347,7 +318,7 @@
+@@ -375,7 +346,7 @@
  
  #: libexif/canon/mnote-canon-entry.c:141
  msgid "4x"
@@ -313,7 +318,7 @@
  
  #: libexif/canon/mnote-canon-entry.c:142 libexif/exif-entry.c:435
  #: libexif/exif-entry.c:465
-@@ -369,9 +340,8 @@
+@@ -397,9 +368,8 @@
  msgstr "Mało"
  
  #: libexif/canon/mnote-canon-entry.c:152
@@ -324,7 +329,7 @@
  
  #: libexif/canon/mnote-canon-entry.c:154
  msgid "50"
-@@ -399,7 +369,7 @@
+@@ -427,7 +397,7 @@
  
  #: libexif/canon/mnote-canon-entry.c:159
  msgid "Default"
@@ -333,7 +338,7 @@
  
  #: libexif/canon/mnote-canon-entry.c:160 libexif/exif-entry.c:431
  msgid "Spot"
-@@ -410,91 +380,76 @@
+@@ -438,99 +408,84 @@
  msgstr "Średnia"
  
  #: libexif/canon/mnote-canon-entry.c:162
@@ -380,6 +385,7 @@
 +msgstr "Daleko"
  
  #: libexif/canon/mnote-canon-entry.c:175
+ #: libexif/pentax/mnote-pentax-entry.c:209
 -#, fuzzy
  msgid "Infinity"
  msgstr "Nieskończoność"
@@ -403,17 +409,23 @@
 +msgstr "Automatycznie wybrany"
  
  #: libexif/canon/mnote-canon-entry.c:179 libexif/canon/mnote-canon-entry.c:302
+ #: libexif/pentax/mnote-pentax-entry.c:223
+ #: libexif/pentax/mnote-pentax-entry.c:237
  msgid "Right"
 -msgstr ""
 +msgstr "Prawy"
  
  #: libexif/canon/mnote-canon-entry.c:180 libexif/canon/mnote-canon-entry.c:303
+ #: libexif/pentax/mnote-pentax-entry.c:221
+ #: libexif/pentax/mnote-pentax-entry.c:236
 -#, fuzzy
  msgid "Center"
 -msgstr "środek"
 +msgstr "Środek"
  
  #: libexif/canon/mnote-canon-entry.c:181 libexif/canon/mnote-canon-entry.c:305
+ #: libexif/pentax/mnote-pentax-entry.c:219
+ #: libexif/pentax/mnote-pentax-entry.c:235
 -#, fuzzy
  msgid "Left"
 -msgstr "lewy"
@@ -432,6 +444,7 @@
 +msgstr "Łatwe robienie zdjęć"
  
  #: libexif/canon/mnote-canon-entry.c:184
+ #: libexif/pentax/mnote-pentax-entry.c:162
 -#, fuzzy
  msgid "Program"
 -msgstr "program"
@@ -439,7 +452,7 @@
  
  #: libexif/canon/mnote-canon-entry.c:185
  msgid "Tv-priority"
-@@ -718,24 +673,23 @@
+@@ -754,24 +709,23 @@
  
  #: libexif/canon/mnote-canon-entry.c:242
  msgid "TTL"
@@ -468,7 +481,7 @@
  
  #: libexif/canon/mnote-canon-entry.c:247
  msgid "FP sync used"
-@@ -743,42 +697,39 @@
+@@ -779,42 +733,39 @@
  
  #: libexif/canon/mnote-canon-entry.c:248
  msgid "Internal"
@@ -519,8 +532,8 @@
 +msgstr "Płynny"
  
  #: libexif/canon/mnote-canon-entry.c:266 libexif/canon/mnote-canon-entry.c:286
- #: libexif/pentax/mnote-pentax-entry.c:74
-@@ -787,7 +738,7 @@
+ #: libexif/pentax/mnote-pentax-entry.c:86
+@@ -823,7 +774,7 @@
  
  #: libexif/canon/mnote-canon-entry.c:267
  msgid "My color data"
@@ -528,8 +541,8 @@
 +msgstr "Moje dane kolorów"
  
  #: libexif/canon/mnote-canon-entry.c:269 libexif/canon/mnote-canon-entry.c:327
- #: libexif/pentax/mnote-pentax-entry.c:113
-@@ -796,15 +747,15 @@
+ #: libexif/pentax/mnote-pentax-entry.c:125
+@@ -833,15 +784,15 @@
  
  #: libexif/canon/mnote-canon-entry.c:270 libexif/canon/mnote-canon-entry.c:326
  msgid "2/3"
@@ -548,7 +561,7 @@
  
  #: libexif/canon/mnote-canon-entry.c:276 libexif/pentax/mnote-pentax-tag.c:43
  msgid "Zoom"
-@@ -841,123 +792,115 @@
+@@ -882,123 +833,115 @@
  
  #: libexif/canon/mnote-canon-entry.c:289
  msgid "Manual temperature (Kelvin)"
@@ -696,9 +709,9 @@
 -msgstr ""
 +msgstr ", "
  
- #: libexif/canon/mnote-canon-entry.c:471 libexif/canon/mnote-canon-entry.c:563
+ #: libexif/canon/mnote-canon-entry.c:477 libexif/canon/mnote-canon-entry.c:572
  #, c-format
-@@ -999,7 +942,6 @@
+@@ -1040,7 +983,6 @@
  msgstr "Ustawienia (część pierwsza)"
  
  #: libexif/canon/mnote-canon-tag.c:35 libexif/canon/mnote-canon-tag.c:87
@@ -706,10 +719,10 @@
  msgid "Focal length"
  msgstr "Ogniskowa"
  
-@@ -1008,9 +950,8 @@
+@@ -1049,9 +991,8 @@
  msgstr "Ustawienia (część druga)"
  
- #: libexif/canon/mnote-canon-tag.c:37
+ #: libexif/canon/mnote-canon-tag.c:37 libexif/pentax/mnote-pentax-entry.c:176
 -#, fuzzy
  msgid "Panorama"
 -msgstr "panorama"
@@ -717,7 +730,7 @@
  
  #: libexif/canon/mnote-canon-tag.c:38
  msgid "Image type"
-@@ -1041,7 +982,6 @@
+@@ -1082,7 +1023,6 @@
  msgstr "Tryb makro"
  
  #: libexif/canon/mnote-canon-tag.c:53 libexif/canon/mnote-canon-tag.c:112
@@ -725,7 +738,7 @@
  msgid "Self-timer"
  msgstr "Czas własny"
  
-@@ -1056,9 +996,8 @@
+@@ -1097,9 +1037,8 @@
  msgstr "Tryb flesza"
  
  #: libexif/canon/mnote-canon-tag.c:56
@@ -736,7 +749,7 @@
  
  #: libexif/canon/mnote-canon-tag.c:57 libexif/canon/mnote-canon-tag.c:77
  msgid "Focus mode"
-@@ -1073,7 +1012,6 @@
+@@ -1114,7 +1053,6 @@
  msgstr "Tryb łatwego robienia zdjęć"
  
  #: libexif/canon/mnote-canon-tag.c:60
@@ -744,7 +757,7 @@
  msgid "Digital zoom"
  msgstr "Powiększenie cyfrowe"
  
-@@ -1102,14 +1040,12 @@
+@@ -1143,14 +1081,12 @@
  msgstr "Tryb pomiaru"
  
  #: libexif/canon/mnote-canon-tag.c:66
@@ -761,7 +774,7 @@
  
  #: libexif/canon/mnote-canon-tag.c:68
  msgid "Exposure mode"
-@@ -1136,9 +1072,8 @@
+@@ -1177,9 +1113,8 @@
  msgstr "Maksymalna jasność"
  
  #: libexif/canon/mnote-canon-tag.c:74
@@ -772,7 +785,7 @@
  
  #: libexif/canon/mnote-canon-tag.c:75
  msgid "Flash activity"
-@@ -1149,77 +1084,68 @@
+@@ -1190,77 +1125,68 @@
  msgstr "Opis flesza"
  
  #: libexif/canon/mnote-canon-tag.c:78
@@ -863,7 +876,7 @@
  
  #: libexif/canon/mnote-canon-tag.c:96
  msgid "White balance"
-@@ -1230,71 +1156,60 @@
+@@ -1271,71 +1197,60 @@
  msgstr "Numer sekwencyjny"
  
  #: libexif/canon/mnote-canon-tag.c:99
@@ -947,23 +960,25 @@
  
  #: libexif/exif-byte-order.c:33
  msgid "Motorola"
-@@ -1342,13 +1257,13 @@
+@@ -1383,13 +1298,16 @@
  
- #: libexif/exif-data.c:1107
+ #: libexif/exif-data.c:1122
  msgid "Don not change maker note"
 -msgstr ""
 +msgstr "Nie zmieniaj oznaczenia twórcy"
  
- #: libexif/exif-data.c:1108
+ #: libexif/exif-data.c:1123
  msgid ""
  "When loading and resaving Exif data, save the maker note unmodified. Be "
  "aware that the maker note can get corrupted."
--msgstr ""
-+msgstr "Przy wczytywaniu i zapisywaniu danych Exif pozostaw oznaczenie twórcy niezmienione. Należy mieć świadomość, że oznaczenie twórcy może zostać uszkodzone."
+ msgstr ""
++"Przy wczytywaniu i zapisywaniu danych Exif pozostaw oznaczenie twórcy "
++"niezmienione. Należy mieć świadomość, że oznaczenie twórcy może zostać "
++"uszkodzone."
  
  #: libexif/exif-entry.c:202 libexif/exif-entry.c:236
  #, c-format
-@@ -1474,20 +1389,19 @@
+@@ -1515,20 +1433,19 @@
  
  #: libexif/exif-entry.c:399
  msgid "Reversed mono"
@@ -987,7 +1002,7 @@
  
  #: libexif/exif-entry.c:400
  msgid "CMYK"
-@@ -1777,22 +1691,18 @@
+@@ -1821,22 +1738,18 @@
  msgstr "Ze światłem stroboskopowym"
  
  #: libexif/exif-entry.c:497
@@ -1010,7 +1025,7 @@
  msgid "Flash did not fire, compulsory flash mode."
  msgstr "Flesz się nie uruchomił w trybie pulsującym."
  
-@@ -1846,13 +1756,12 @@
+@@ -1890,13 +1803,12 @@
  "zwrotne nie wykryte."
  
  #: libexif/exif-entry.c:518
@@ -1025,7 +1040,7 @@
  
  #: libexif/exif-entry.c:520
  msgid "Flash did not fire, auto mode, red-eye reduction mode."
-@@ -1974,7 +1883,7 @@
+@@ -2018,7 +1930,7 @@
  #: libexif/exif-entry.c:721
  #, c-format
  msgid " (f/%.01f)"
@@ -1034,7 +1049,7 @@
  
  #: libexif/exif-entry.c:752
  #, c-format
-@@ -1998,7 +1907,7 @@
+@@ -2042,7 +1954,7 @@
  #: libexif/exif-entry.c:810
  #, c-format
  msgid " (%.02f cd/m^2)"
@@ -1043,18 +1058,78 @@
  
  #: libexif/exif-entry.c:819
  msgid "DSC"
-@@ -3281,7 +3190,6 @@
+@@ -2979,7 +2891,7 @@
+ "Exposure) setting."
+ msgstr ""
+ "Szybkość migawki. Jednostką jest ustawienie APEX (Additive System of "
+-"Photographic Exposure."
++"Photographic Exposure)."
+ 
+ #: libexif/exif-tag.c:413
+ msgid "The lens aperture. The unit is the APEX value."
+@@ -3139,26 +3051,23 @@
+ 
+ #: libexif/exif-tag.c:489
+ msgid "XP Title"
+-msgstr ""
++msgstr "Tytuł XP"
+ 
+ #: libexif/exif-tag.c:491
+-#, fuzzy
+ msgid "XP Comment"
+-msgstr "Komentarz użytkownika"
++msgstr "Komentarz XP"
+ 
+ #: libexif/exif-tag.c:493
+-#, fuzzy
+ msgid "XP Author"
+-msgstr "Auto"
++msgstr "Autor XP"
+ 
+ #: libexif/exif-tag.c:495
+ msgid "XP Keywords"
+-msgstr ""
++msgstr "Słowa kluczowe XP"
+ 
+ #: libexif/exif-tag.c:497
+-#, fuzzy
+ msgid "XP Subject"
+-msgstr "Obszar obiektu"
++msgstr "Temat XP"
+ 
+ #: libexif/exif-tag.c:500
+ msgid "The FlashPix format version supported by a FPXR file."
+@@ -3181,8 +3090,7 @@
+ "przestrzeni kolorów w oparciu o warunki i środowisko monitora PC. Jeśli "
+ "użyta jest inna przestrzeń kolorów niż sRGB, ustawiona jest wartość "
+ "\"nieskalibrowana\" (Uncalibrated, =FFFF.H). Dane obrazu zapisane jako "
+-"nieskalibrowane mogą być traktowane jako sRGB przy konwersji do FlashPix. O "
+-"sRGB p. załącznik E."
++"nieskalibrowane mogą być traktowane jako sRGB przy konwersji do FlashPix."
+ 
+ #: libexif/exif-tag.c:512
+ msgid ""
+@@ -3195,7 +3103,7 @@
+ "skompresowany plik, w tym znaczniku musi być zapisana poprawna szerokość "
+ "znaczącego obrazu, niezależnie od istnienia danych dopełniających czy "
+ "znacznika restartu. Ten znacznik nie powinien istnieć w pliku "
+-"nieskompresowanym. Szczegóły w sekcji 2.8.1 i załączniku F."
++"nieskompresowanym."
+ 
+ #: libexif/exif-tag.c:519
+ msgid ""
+@@ -3347,7 +3255,6 @@
  msgstr "Położenie obiektu"
  
- #: libexif/exif-tag.c:587
+ #: libexif/exif-tag.c:596
 -#, fuzzy
  msgid ""
  "Indicates the location of the main subject in the scene. The value of this "
  "tag represents the pixel at the center of the main subject relative to the "
-@@ -3320,13 +3228,12 @@
+@@ -3386,13 +3293,12 @@
  msgstr "Źródło pliku"
  
- #: libexif/exif-tag.c:600
+ #: libexif/exif-tag.c:609
 -#, fuzzy
  msgid ""
  "Indicates the image source. If a DSC recorded the image, the tag value of "
@@ -1064,9 +1139,9 @@
 -"znacznika zawsze wynosi 3, oznaczając, że obraz był zapisany przez DSC."
 +"znacznika zawsze wynosi 3, oznaczając, że obraz był zapisany na DSC."
  
- #: libexif/exif-tag.c:603
+ #: libexif/exif-tag.c:612
  msgid "Scene Type"
-@@ -3630,7 +3537,6 @@
+@@ -3696,7 +3602,6 @@
  msgstr "Predefiniowany"
  
  #: libexif/olympus/mnote-olympus-entry.c:119
@@ -1074,48 +1149,48 @@
  msgid "Incandescence"
  msgstr "Żarówka"
  
-@@ -3718,34 +3624,28 @@
+@@ -3784,34 +3689,28 @@
  msgstr "Położenie AF: prawo"
  
- #: libexif/olympus/mnote-olympus-entry.c:318
+ #: libexif/olympus/mnote-olympus-entry.c:319
 -#, fuzzy
  msgid "AF Position: Upper-left"
 -msgstr "Położenie AF: lewo"
 +msgstr "Położenie AF: lewa góra"
  
- #: libexif/olympus/mnote-olympus-entry.c:319
+ #: libexif/olympus/mnote-olympus-entry.c:320
 -#, fuzzy
  msgid "AF Position: Upper-right"
 -msgstr "Położenie AF: prawo"
 +msgstr "Położenie AF: prawa góra"
  
- #: libexif/olympus/mnote-olympus-entry.c:320
+ #: libexif/olympus/mnote-olympus-entry.c:321
 -#, fuzzy
  msgid "AF Position: Lower-left"
 -msgstr "Położenie AF: lewo"
 +msgstr "Położenie AF: lewy dół"
  
- #: libexif/olympus/mnote-olympus-entry.c:321
+ #: libexif/olympus/mnote-olympus-entry.c:322
 -#, fuzzy
  msgid "AF Position: Lower-right"
 -msgstr "Położenie AF: prawo"
 +msgstr "Położenie AF: prawy dół"
  
- #: libexif/olympus/mnote-olympus-entry.c:322
+ #: libexif/olympus/mnote-olympus-entry.c:323
 -#, fuzzy
  msgid "AF Position: Far Left"
 -msgstr "Położenie AF: lewo"
 +msgstr "Położenie AF: dalekie lewo"
  
- #: libexif/olympus/mnote-olympus-entry.c:323
+ #: libexif/olympus/mnote-olympus-entry.c:324
 -#, fuzzy
  msgid "AF Position: Far Right"
 -msgstr "Położenie AF: prawo"
 +msgstr "Położenie AF: dalekie prawo"
  
- #: libexif/olympus/mnote-olympus-entry.c:324
+ #: libexif/olympus/mnote-olympus-entry.c:325
  msgid "Unknown AF Position"
-@@ -3873,24 +3773,23 @@
+@@ -3940,24 +3839,23 @@
  
  #: libexif/olympus/mnote-olympus-tag.c:50
  msgid "Preview Image"
@@ -1144,7 +1219,7 @@
  
  #: libexif/olympus/mnote-olympus-tag.c:58
  #: libexif/olympus/mnote-olympus-tag.c:96
-@@ -3937,9 +3836,8 @@
+@@ -4004,9 +3902,8 @@
  msgstr "Bracketing"
  
  #: libexif/olympus/mnote-olympus-tag.c:69
@@ -1155,7 +1230,7 @@
  
  #: libexif/olympus/mnote-olympus-tag.c:70
  msgid "Contrast curve"
-@@ -3951,7 +3849,6 @@
+@@ -4018,7 +3915,6 @@
  msgstr "Tryb koloru"
  
  #: libexif/olympus/mnote-olympus-tag.c:72
@@ -1163,7 +1238,7 @@
  msgid "Lighttype"
  msgstr "Rodzaj oświetlenia"
  
-@@ -3965,12 +3862,11 @@
+@@ -4032,16 +3928,15 @@
  
  #: libexif/olympus/mnote-olympus-tag.c:79
  msgid "Sensor pixel size"
@@ -1176,9 +1251,14 @@
 -msgstr "Rozmiar obrazu"
 +msgstr "Rozmiar danych obrazu"
  
+ #: libexif/olympus/mnote-olympus-tag.c:82
+ msgid "Size of compressed image data in bytes."
+-msgstr ""
++msgstr "Rozmiar danych skompresowanego obrazu w bajtach."
+ 
  #: libexif/olympus/mnote-olympus-tag.c:84
  msgid "Total number of pictures taken"
-@@ -3981,9 +3877,8 @@
+@@ -4052,9 +3947,8 @@
  msgstr "Optymalizacja obrazu"
  
  #: libexif/olympus/mnote-olympus-tag.c:88
@@ -1189,7 +1269,414 @@
  
  #: libexif/olympus/mnote-olympus-tag.c:89
  msgid "Capture Editor Data"
-@@ -4088,85 +3983,3 @@
+@@ -4111,9 +4005,8 @@
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:79
+ #: libexif/pentax/mnote-pentax-entry.c:133
+-#, fuzzy
+ msgid "Multi-exposure"
+-msgstr "Ekspozycja ręczna"
++msgstr "Ekspozycja wielokrotna"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:82
+ #: libexif/pentax/mnote-pentax-entry.c:136
+@@ -4144,283 +4037,242 @@
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:139
+ msgid "TIFF"
+-msgstr ""
++msgstr "TIFF"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:149
+ msgid "2560x1920 or 2304x1728"
+-msgstr ""
++msgstr "2560x1920 lub 2304x1728"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:155
+ msgid "2304x1728 or 2592x1944"
+-msgstr ""
++msgstr "2304x1728 lub 2592x1944"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:157
+ msgid "2816x2212 or 2816x2112"
+-msgstr ""
++msgstr "2816x2212 lub 2816x2112"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:163
+ #: libexif/pentax/mnote-pentax-entry.c:295
+-#, fuzzy
+ msgid "Program AE"
+-msgstr "program"
++msgstr "Program AE"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:167
+-#, fuzzy
+ msgid "Sport"
+ msgstr "Sport"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:168
+ #: libexif/pentax/mnote-pentax-entry.c:291
+-#, fuzzy
+ msgid "Night Scene"
+ msgstr "Scena nocna"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:170
+ msgid "Surf & Snow"
+-msgstr ""
++msgstr "Surfing i śnieg"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:171
+ msgid "Sunset or Candlelight"
+-msgstr ""
++msgstr "Wschód słońca lub światło świecy"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:172
+-#, fuzzy
+ msgid "Autumn"
+-msgstr "Auto"
++msgstr "Jesień"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:175
+ msgid "Text"
+-msgstr ""
++msgstr "Tekst"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:177
+-#, fuzzy
+ msgid "Self Portrait"
+-msgstr "Portret"
++msgstr "Autoportret"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:178
+-#, fuzzy
+ msgid "Illustrations"
+-msgstr "Nasycenie"
++msgstr "Ilustracje"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:179
+-#, fuzzy
+ msgid "Digital Filter"
+-msgstr "Powiększenie cyfrowe"
++msgstr "Filtr cyfrowy"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:180
+-#, fuzzy
+ msgid "Museum"
+-msgstr "średni"
++msgstr "Muzeum"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:181
+-#, fuzzy
+ msgid "Food"
+-msgstr "Dobra"
++msgstr "Jedzenie"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:182
+-#, fuzzy
+ msgid "Green Mode"
+-msgstr "Tryb pomiaru"
++msgstr "Tryb zieleni"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:183
+-#, fuzzy
+ msgid "Light Pet"
+-msgstr "Rodzaj oświetlenia"
++msgstr "Jasne zwierzę"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:184
+ msgid "Dark Pet"
+-msgstr ""
++msgstr "Ciemne zwierzę"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:185
+-#, fuzzy
+ msgid "Medium Pet"
+-msgstr "średni"
++msgstr "Pośrednie zwierzę"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:187
+ #: libexif/pentax/mnote-pentax-entry.c:292
+-#, fuzzy
+ msgid "Candlelight"
+-msgstr "Światło dzienne"
++msgstr "Światło świecy"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:188
+ msgid "Natural Skin Tone"
+-msgstr ""
++msgstr "Naturalna tonacja skóry"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:189
+ msgid "Synchro Sound Record"
+-msgstr ""
++msgstr "Synchroniczny zapis dźwięku"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:190
+ msgid "Frame Composite"
+-msgstr ""
++msgstr "Złożenie klatek"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:193
+-#, fuzzy
+ msgid "Auto, Did not fire"
+-msgstr "flesz się nie uruchomił"
++msgstr "Automatyczny, nie uruchomił się"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:195
+-#, fuzzy
+ msgid "Auto, Did not fire, Red-eye reduction"
+-msgstr "automatyczny + redukcja czerwonych oczu"
++msgstr "Automatyczny, nie uruchomił się, redukcja czerwonych oczu"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:196
+-#, fuzzy
+ msgid "Auto, Fired"
+-msgstr "Auto bracket"
++msgstr "Automatyczny, uruchomił się"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:198
+-#, fuzzy
+ msgid "Auto, Fired, Red-eye reduction"
+-msgstr "automatyczny + redukcja czerwonych oczu"
++msgstr "Automatyczny, uruchomił się, redukcja czerwonych oczu"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:199
+-#, fuzzy
+ msgid "On, Red-eye reduction"
+-msgstr "Redukcja czerwonych oczu"
++msgstr "Włączony, redukcja czerwonych oczu"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:200
+ msgid "On, Wireless"
+-msgstr ""
++msgstr "Włączony, bezprzewodowy"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:201
+-#, fuzzy
+ msgid "On, Soft"
+-msgstr "Mała"
++msgstr "Włączony, miękki"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:202
+-#, fuzzy
+ msgid "On, Slow-sync"
+-msgstr "powolna synchronizacja"
++msgstr "Włączony, powolna synchronizacja"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:203
+-#, fuzzy
+ msgid "On, Slow-sync, Red-eye reduction"
+-msgstr "Redukcja czerwonych oczu"
++msgstr "Włączony, powolna synchronizacja, redukcja czerwonych oczu"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:204
+ msgid "On, Trailing-curtain Sync"
+-msgstr ""
++msgstr "Włączony, synchronizacja z końcem migawki"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:211
+-#, fuzzy
+ msgid "Pan Focus"
+-msgstr "Pan Focus"
++msgstr "Pan focus"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:212
+ msgid "AF-S"
+-msgstr ""
++msgstr "AF-S"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:213
+ msgid "AF-C"
+-msgstr ""
++msgstr "AF-C"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:216
+-#, fuzzy
+ msgid "Upper-left"
+-msgstr "Położenie AF: lewo"
++msgstr "Lewy górny róg"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:217
+ msgid "Top"
+-msgstr ""
++msgstr "Góra"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:218
+-#, fuzzy
+ msgid "Upper-right"
+-msgstr "góra - prawo"
++msgstr "Prawy górny róg"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:220
+ msgid "Mid-left"
+-msgstr ""
++msgstr "Lewy środek"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:222
+-#, fuzzy
+ msgid "Mid-right"
+-msgstr "prawy"
++msgstr "Prawy środek"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:224
+-#, fuzzy
+ msgid "Lower-left"
+-msgstr "Położenie AF: lewo"
++msgstr "Lewy dolny róg"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:225
+-#, fuzzy
+ msgid "Bottom"
+-msgstr "od dołu do góry"
++msgstr "Dół"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:226
+-#, fuzzy
+ msgid "Lower-right"
+-msgstr "góra - prawo"
++msgstr "Prawy dolny róg"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:227
+-#, fuzzy
+ msgid "Fixed Center"
+-msgstr "Dobra pogoda"
++msgstr "Sztywny środek"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:231
+-#, fuzzy
+ msgid "Multiple"
+ msgstr "Wielopunktowy"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:232
+-#, fuzzy
+ msgid "Top-left"
+-msgstr "góra - lewo"
++msgstr "Lewy górny róg"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:233
+-#, fuzzy
+ msgid "Top-center"
+-msgstr "wyśrodkowane"
++msgstr "Górny środek"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:234
+-#, fuzzy
+ msgid "Top-right"
+-msgstr "góra - prawo"
++msgstr "Prawy górny róg"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:238
+-#, fuzzy
+ msgid "Bottom-left"
+-msgstr "dół - lewo"
++msgstr "Lewy dolny róg"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:239
+-#, fuzzy
+ msgid "Bottom-center"
+-msgstr "dół - lewo"
++msgstr "Dolny środek"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:240
+-#, fuzzy
+ msgid "Bottom-right"
+-msgstr "dół - prawo"
++msgstr "Prawy dolny róg"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:250
+-#, fuzzy
+ msgid "Daylight Fluorescent"
+ msgstr "Fluorescencyjne światło dzienne"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:251
+-#, fuzzy
+ msgid "Daywhite Fluorescent"
+ msgstr "Białe fluorescencyjne światło dzienne"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:252
+-#, fuzzy
+ msgid "White Fluorescent"
+ msgstr "Białe światło fluorescencyjne"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:256
+-#, fuzzy
+ msgid "User Selected"
+-msgstr "automatycznie wybrany"
++msgstr "Wybrane przez użytkownika"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:278
+ msgid "3008x2008 or 3040x2024"
+-msgstr ""
++msgstr "3008x2008 lub 3040x2024"
+ 
+ #: libexif/pentax/mnote-pentax-entry.c:289
+-#, fuzzy
+ msgid "Digital Filter?"
+-msgstr "Powiększenie cyfrowe"
++msgstr "Filtr cyfrowy?"
+ 
+ #: libexif/pentax/mnote-pentax-tag.c:34 libexif/pentax/mnote-pentax-tag.c:61
+ msgid "Capture Mode"
+@@ -4435,135 +4287,49 @@
+ msgstr "Szybkość ISO"
+ 
+ #: libexif/pentax/mnote-pentax-tag.c:55
+-#, fuzzy
+ msgid "Colors"
+-msgstr "Kolorowy"
++msgstr "Kolory"
+ 
+ #: libexif/pentax/mnote-pentax-tag.c:58
+ msgid "PrintIM Settings"
+ msgstr "Ustawienia PrintIM"
+ 
+ #: libexif/pentax/mnote-pentax-tag.c:59 libexif/pentax/mnote-pentax-tag.c:71
+-#, fuzzy
+ msgid "Time Zone"
+ msgstr "Strefa czasowa"
+ 
+ #: libexif/pentax/mnote-pentax-tag.c:60
+-#, fuzzy
+ msgid "Daylight Savings"
+ msgstr "Zmiana czasu"
+ 
+ #: libexif/pentax/mnote-pentax-tag.c:63
+-#, fuzzy
+ msgid "Image Size"
+ msgstr "Rozmiar obrazu"
+ 
+ #: libexif/pentax/mnote-pentax-tag.c:64
+-#, fuzzy
+ msgid "PictureMode"
+ msgstr "Tryb zdjęcia"
+ 
+ #: libexif/pentax/mnote-pentax-tag.c:67
+-#, fuzzy
+ msgid "AF Point Selected"
+ msgstr "Wybrany punkt AF"
+ 
+ #: libexif/pentax/mnote-pentax-tag.c:68
+-#, fuzzy
+ msgid "Auto AF Point"
+-msgstr "Użyty punkt AF"
++msgstr "Automatyczny wybór punktu AF"
+ 
+ #: libexif/pentax/mnote-pentax-tag.c:70
+-#, fuzzy
+ msgid "Object Distance"
+ msgstr "Odległość obiektu"
+ 
+ #: libexif/pentax/mnote-pentax-tag.c:70
+-#, fuzzy
+ msgid "Distance of photographed object in millimeters."
+-msgstr "Odległość obiektu podana w metrach"
++msgstr "Odległość fotografowanego obiektu w milimetrach."
+ 
+ #: libexif/pentax/mnote-pentax-tag.c:72
+-#, fuzzy
+ msgid "Bestshot mode"
+ msgstr "Tryb łatwego robienia zdjęć"
+ 
  #: test/nls/test-nls.c:20 test/nls/test-nls.c:23 test/nls/test-nls.c:24
  msgid "[DO_NOT_TRANSLATE_THIS_MARKER]"
  msgstr "[DO_NOT_TRANSLATE_THIS_MARKER]"
@@ -1200,9 +1687,6 @@
 -#~ msgstr ""
 -#~ "Flesz się uruchomił w trybie pulsującym z redukcją czerwonych oczu, "
 -#~ "światło zwrotne wykryte."
--
--#~ msgid "flash did not fire"
--#~ msgstr "flesz się nie uruchomił"
 -
 -#~ msgid "auto"
 -#~ msgstr "automatyczny"
@@ -1245,9 +1729,6 @@
 -
 -#~ msgid "none (manual focus)"
 -#~ msgstr "brak (ręczna ogniskowa)"
--
--#~ msgid "right"
--#~ msgstr "prawy"
 -
 -#~ msgid "single"
 -#~ msgstr "pojedynczy"
