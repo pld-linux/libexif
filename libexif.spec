@@ -20,7 +20,7 @@ Patch0:		%{name}-pl.po-update.patch
 Patch1:		%{name}-ac.patch
 URL:		http://libexif.sourceforge.net/
 BuildRequires:	autoconf >= 2.59
-BuildRequires:	automake >= 1:1.8
+BuildRequires:	automake >= 1:1.9
 BuildRequires:	doxygen
 BuildRequires:	gettext-devel >= 0.14.1
 BuildRequires:	libtool
