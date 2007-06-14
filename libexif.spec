@@ -2,20 +2,20 @@
 # NOTE:
 # - exif headers should be included as <libexif/something.h>
 #   so don't ,,fix'' pkgconfig file
-
+#
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	Library for parsing EXIF files from digital cameras
 Summary(pl.UTF-8):	Biblioteka do czytania plików EXIF z kamer cyfrowych
 Name:		libexif
-Version:	0.6.15
+Version:	0.6.16
 Release:	1
 Epoch:		1
 License:	MIT
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/libexif/%{name}-%{version}.tar.bz2
-# Source0-md5:	58871e364c454d107eee001456cc8f24
+# Source0-md5:	deee153b1ded5a944ea05d041d959eca
 Patch0:		%{name}-pl.po-update.patch
 Patch1:		%{name}-ac.patch
 URL:		http://libexif.sourceforge.net/
