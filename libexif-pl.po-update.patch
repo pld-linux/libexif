@@ -1,51 +1,64 @@
---- libexif-0.6.16/po/pl.po.orig	2007-06-12 15:13:13.000000000 +0200
-+++ libexif-0.6.16/po/pl.po	2007-06-14 18:41:57.930866194 +0200
+--- libexif-0.6.17/po/pl.po.orig	2008-11-06 09:59:09.000000000 +0100
++++ libexif-0.6.17/po/pl.po	2008-11-18 19:16:54.299348867 +0100
 @@ -1,14 +1,14 @@
  # Polish translation for libexif.
--# Copyright (C) 2006 Free Software Foundation, Inc.
-+# Copyright (C) 2006, 2007 Free Software Foundation, Inc.
+-# Copyright (C) 2006, 2007 Free Software Foundation, Inc.
++# Copyright (C) 2006, 2007, 2008 Free Software Foundation, Inc.
  # This file is distributed under the same license as the libexif package.
- # Jakub Bogusz <qboosh@pld-linux.org>, 2005-2007.
+-# Jakub Bogusz <qboosh@pld-linux.org>, 2005-2007.
++# Jakub Bogusz <qboosh@pld-linux.org>, 2005-2008.
  #
  msgid ""
  msgstr ""
--"Project-Id-Version: libexif 0.6.15\n"
-+"Project-Id-Version: libexif 0.6.16\n"
+-"Project-Id-Version: libexif 0.6.17-pre1\n"
++"Project-Id-Version: libexif 0.6.17\n"
  "Report-Msgid-Bugs-To: \n"
- "POT-Creation-Date: 2007-06-12 15:13+0200\n"
--"PO-Revision-Date: 2007-05-26 19:42+0200\n"
-+"PO-Revision-Date: 2007-07-14 18:10+0200\n"
+ "POT-Creation-Date: 2008-11-06 00:59-0800\n"
+-"PO-Revision-Date: 2007-12-19 22:02+0100\n"
++"PO-Revision-Date: 2008-11-18 18:34+0100\n"
  "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
  "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
  "MIME-Version: 1.0\n"
-@@ -3787,9 +3787,9 @@
- msgstr "One-touch"
+@@ -2236,9 +2236,9 @@
+ msgstr "(Redaktor)"
  
- #: libexif/olympus/mnote-olympus-entry.c:571
+ #: libexif/exif-entry.c:735
 -#, fuzzy, c-format
 +#, c-format
- msgid "%i bytes unknown data: "
--msgstr "%li bajtów nieznanych danych: "
-+msgstr "%i bajtów nieznanych danych: "
+ msgid "%.02lf EV"
+-msgstr "%.02f EV"
++msgstr "%.02lf EV"
  
- #: libexif/olympus/mnote-olympus-tag.c:37
- msgid "Firmware Version"
-@@ -4278,14 +4278,14 @@
- msgstr "Filtr cyfrowy?"
+ #: libexif/exif-entry.c:736
+ #, c-format
+@@ -3126,24 +3126,27 @@
  
- #: libexif/pentax/mnote-pentax-entry.c:353
--#, fuzzy, c-format
-+#, c-format
- msgid "Internal error (unknown value %i)"
--msgstr "Błąd wewnętrzny (nieznana wartość %i)."
-+msgstr "Błąd wewnętrzny (nieznana wartość %i)"
+ #: libexif/exif-tag.c:368
+ msgid "GPS Img Direction Reference"
+-msgstr ""
++msgstr "Odniesienie kierunku wg GPS"
  
- #: libexif/pentax/mnote-pentax-entry.c:376
--#, fuzzy, c-format
-+#, c-format
- msgid "Internal error (unknown value %i %i)"
--msgstr "Błąd wewnętrzny (nieznana wartość %i)."
-+msgstr "Błąd wewnętrzny (nieznana wartość %i %i)"
+ #: libexif/exif-tag.c:369
+ msgid ""
+ "Indicates the reference for giving the direction of the image when it is "
+ "captured. 'T' denotes true direction and 'M' is magnetic direction."
+ msgstr ""
++"Określenie odniesienia wskazania kierunku zdjęcia w czasie jego robienia. "
++"'T' oznacza kierunek prawdziwy, a 'M' - magnetyczny."
  
- #: libexif/pentax/mnote-pentax-tag.c:34 libexif/pentax/mnote-pentax-tag.c:61
- msgid "Capture Mode"
+ #: libexif/exif-tag.c:371
+-#, fuzzy
+ msgid "GPS Img Direction"
+-msgstr "Opis obrazu"
++msgstr "Kierunek wg GPS"
+ 
+ #: libexif/exif-tag.c:372
+ msgid ""
+ "Indicates the direction of the image when it was captured. The range of "
+ "values is from 0.00 to 359.99."
+ msgstr ""
++"Określenie kierunku zdjęcia w czasie jego robienia. Zakres wartości od 0.00 "
++"do 359.99."
+ 
+ #: libexif/exif-tag.c:375
+ msgid "ISO Speed Ratings"
