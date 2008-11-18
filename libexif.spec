@@ -12,7 +12,7 @@ Name:		libexif
 Version:	0.6.17
 Release:	1
 Epoch:		1
-License:	MIT
+License:	LGPL v2+
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/libexif/%{name}-%{version}.tar.bz2
 # Source0-md5:	f7cf4e623a48c9a3b13f7f95f0a41015
