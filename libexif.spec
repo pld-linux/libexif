@@ -9,13 +9,13 @@
 Summary:	Library for parsing EXIF files from digital cameras
 Summary(pl.UTF-8):	Biblioteka do czytania plików EXIF z kamer cyfrowych
 Name:		libexif
-Version:	0.6.20
-Release:	2
+Version:	0.6.21
+Release:	1
 Epoch:		1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/libexif/%{name}-%{version}.tar.bz2
-# Source0-md5:	19844ce6b5d075af16f0d45de1e8a6a3
+# Source0-md5:	27339b89850f28c8f1c237f233e05b27
 URL:		http://libexif.sourceforge.net/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.9
