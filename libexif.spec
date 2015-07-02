@@ -5,12 +5,12 @@
 #
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
-#
+
 Summary:	Library for parsing EXIF files from digital cameras
 Summary(pl.UTF-8):	Biblioteka do czytania plików EXIF z kamer cyfrowych
 Name:		libexif
 Version:	0.6.21
-Release:	2
+Release:	3
 Epoch:		1
 License:	LGPL v2+
 Group:		Libraries
@@ -67,6 +67,9 @@ Statyczna wersja libexif.
 Summary:	libexif API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki libexif
 Group:		Documentation
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description apidocs
 API and internal documentation for libexif library.
