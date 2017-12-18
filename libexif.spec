@@ -16,7 +16,7 @@ License:	LGPL v2+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/libexif/%{name}-%{version}.tar.bz2
 # Source0-md5:	27339b89850f28c8f1c237f233e05b27
-URL:		http://libexif.sourceforge.net/
+URL:		https://libexif.github.io/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	doxygen
