@@ -9,19 +9,23 @@
 Summary:	Library for parsing EXIF files from digital cameras
 Summary(pl.UTF-8):	Biblioteka do czytania plików EXIF z kamer cyfrowych
 Name:		libexif
-Version:	0.6.21
-Release:	3
+Version:	0.6.22
+%define	tagver	%(echo %{version} | tr . _)
+Release:	1
 Epoch:		1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://downloads.sourceforge.net/libexif/%{name}-%{version}.tar.bz2
-# Source0-md5:	27339b89850f28c8f1c237f233e05b27
+#Source0Download: https://github.com/libexif/libexif/releases
+Source0:	https://github.com/libexif/libexif/releases/download/libexif-%{tagver}-release/%{name}-%{version}.tar.xz
+# Source0-md5:	1070601438443fdd5b8635565693cf99
 URL:		https://libexif.github.io/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	doxygen
 BuildRequires:	gettext-tools >= 0.14.1
 BuildRequires:	libtool
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
 Obsoletes:	libexif7
 Obsoletes:	libmnote
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -67,7 +71,7 @@ Statyczna wersja libexif.
 Summary:	libexif API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki libexif
 Group:		Documentation
-%if "%{_rpmversion}" >= "5"
+%if "%{_rpmversion}" >= "4.6"
 BuildArch:	noarch
 %endif
 
@@ -88,6 +92,7 @@ Dokumentacja API oraz wewnętrzna dla biblioteki libexif.
 %{__autoheader}
 %{__automake}
 %configure \
+	--disable-silent-rules
 	%{!?with_static_libs:--disable-static}
 
 # docs generation fails with -jN>1
@@ -99,7 +104,10 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%{__rm} -r $RPM_BUILD_ROOT{%{_docdir}/libexif,%{_libdir}/libexif.la}
+# obsoleted by pkg-config
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libexif.la
+# packaged as %doc
+%{__rm} -r $RPM_BUILD_ROOT%{_docdir}/libexif
 
 %find_lang %{name}-12
 
@@ -118,8 +126,8 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libexif.so
-%{_includedir}/%{name}
-%{_pkgconfigdir}/%{name}.pc
+%{_includedir}/libexif
+%{_pkgconfigdir}/libexif.pc
 
 %if %{with static_libs}
 %files static
