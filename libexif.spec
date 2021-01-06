@@ -92,7 +92,7 @@ Dokumentacja API oraz wewnętrzna dla biblioteki libexif.
 %{__autoheader}
 %{__automake}
 %configure \
-	--disable-silent-rules
+	--disable-silent-rules \
 	%{!?with_static_libs:--disable-static}
 
 # docs generation fails with -jN>1
