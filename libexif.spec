@@ -71,9 +71,7 @@ Statyczna wersja libexif.
 Summary:	libexif API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki libexif
 Group:		Documentation
-%if "%{_rpmversion}" >= "4.6"
 BuildArch:	noarch
-%endif
 
 %description apidocs
 API and internal documentation for libexif library.
