@@ -9,25 +9,23 @@
 Summary:	Library for parsing EXIF files from digital cameras
 Summary(pl.UTF-8):	Biblioteka do czytania plików EXIF z kamer cyfrowych
 Name:		libexif
-Version:	0.6.22
-%define	tagver	%(echo %{version} | tr . _)
+Version:	0.6.24
 Release:	1
 Epoch:		1
 License:	LGPL v2+
 Group:		Libraries
 #Source0Download: https://github.com/libexif/libexif/releases
-Source0:	https://github.com/libexif/libexif/releases/download/libexif-%{tagver}-release/%{name}-%{version}.tar.xz
-# Source0-md5:	1070601438443fdd5b8635565693cf99
+Source0:	https://github.com/libexif/libexif/releases/download/v%{version}/%{name}-%{version}.tar.bz2
+# Source0-md5:	00ea6e7ff62d3fd41ea9b2139746703c
 URL:		https://libexif.github.io/
-BuildRequires:	autoconf >= 2.59
-BuildRequires:	automake >= 1:1.9
+BuildRequires:	autoconf >= 2.69
+BuildRequires:	automake >= 1:1.14.1
 BuildRequires:	doxygen
-BuildRequires:	gettext-tools >= 0.14.1
-BuildRequires:	libtool
-BuildRequires:	tar >= 1:1.22
-BuildRequires:	xz
-Obsoletes:	libexif7
-Obsoletes:	libmnote
+BuildRequires:	gettext-tools >= 0.18.3
+BuildRequires:	libtool >= 2:2
+BuildRequires:	rpm-build >= 4.6
+Obsoletes:	libexif7 < 0.6
+Obsoletes:	libmnote < 0.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -45,8 +43,8 @@ Summary:	Header files for libexif
 Summary(pl.UTF-8):	Pliki nagłówkowe dla libexif
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
-Obsoletes:	libexif7-devel
-Obsoletes:	libmnote-devel
+Obsoletes:	libexif7-devel < 0.6
+Obsoletes:	libmnote-devel < 0.6
 
 %description devel
 Header files for libexif.
@@ -59,7 +57,7 @@ Summary:	Static version of libexif
 Summary(pl.UTF-8):	Statyczna wersja libexif
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
-Obsoletes:	libmnote-static
+Obsoletes:	libmnote-static < 0.6
 
 %description static
 Static version of libexif.
