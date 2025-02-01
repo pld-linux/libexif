@@ -4,19 +4,19 @@
 #   so don't ,,fix'' pkgconfig file
 #
 # Conditional build:
-%bcond_without	static_libs	# don't build static library
+%bcond_without	static_libs	# static library
 
 Summary:	Library for parsing EXIF files from digital cameras
 Summary(pl.UTF-8):	Biblioteka do czytania plików EXIF z kamer cyfrowych
 Name:		libexif
-Version:	0.6.24
+Version:	0.6.25
 Release:	1
 Epoch:		1
 License:	LGPL v2+
 Group:		Libraries
 #Source0Download: https://github.com/libexif/libexif/releases
-Source0:	https://github.com/libexif/libexif/releases/download/v%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	00ea6e7ff62d3fd41ea9b2139746703c
+Source0:	https://github.com/libexif/libexif/releases/download/v%{version}/%{name}-%{version}.tar.xz
+# Source0-md5:	d6d0a71059f16fd08c1547b2cdf1da6d
 URL:		https://libexif.github.io/
 BuildRequires:	autoconf >= 2.69
 BuildRequires:	automake >= 1:1.14.1
@@ -24,6 +24,8 @@ BuildRequires:	doxygen
 BuildRequires:	gettext-tools >= 0.18.3
 BuildRequires:	libtool >= 2:2
 BuildRequires:	rpm-build >= 4.6
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
 Obsoletes:	libexif7 < 0.6
 Obsoletes:	libmnote < 0.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
