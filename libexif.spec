@@ -9,14 +9,14 @@
 Summary:	Library for parsing EXIF files from digital cameras
 Summary(pl.UTF-8):	Biblioteka do czytania plików EXIF z kamer cyfrowych
 Name:		libexif
-Version:	0.6.25
+Version:	0.6.26
 Release:	1
 Epoch:		1
 License:	LGPL v2+
 Group:		Libraries
 #Source0Download: https://github.com/libexif/libexif/releases
 Source0:	https://github.com/libexif/libexif/releases/download/v%{version}/%{name}-%{version}.tar.xz
-# Source0-md5:	d6d0a71059f16fd08c1547b2cdf1da6d
+# Source0-md5:	0437e3965f2ea2aeb4ea71100ef8d835
 URL:		https://libexif.github.io/
 BuildRequires:	autoconf >= 2.69
 BuildRequires:	automake >= 1:1.14.1
@@ -82,6 +82,8 @@ Dokumentacja API oraz wewnętrzna dla biblioteki libexif.
 %prep
 %setup -q
 
+%{__sed} -ne '/^ALL_LINGUAS=/ s/.*="\([^"]\+\)"$/\1/p' configure.ac | tr ' ' '\n' > po/LINGUAS
+
 %build
 %{__gettextize}
 %{__libtoolize}
@@ -118,12 +120,12 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}-12.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
-%attr(755,root,root) %{_libdir}/libexif.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libexif.so.12
+%{_libdir}/libexif.so.*.*.*
+%ghost %{_libdir}/libexif.so.12
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libexif.so
+%{_libdir}/libexif.so
 %{_includedir}/libexif
 %{_pkgconfigdir}/libexif.pc
 
