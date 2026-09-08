@@ -44,7 +44,7 @@ EXIF pozwala czytać informacje z tych znaczników.
 Summary:	Header files for libexif
 Summary(pl.UTF-8):	Pliki nagłówkowe dla libexif
 Group:		Development/Libraries
-Requires:	%{name} = %{epoch}:%{version}-%{release}
+Requires:	%{name}%{?_isa} = %{epoch}:%{version}-%{release}
 Obsoletes:	libexif7-devel < 0.6
 Obsoletes:	libmnote-devel < 0.6
 
@@ -58,7 +58,7 @@ Pliki nagłówkowe dla libexif.
 Summary:	Static version of libexif
 Summary(pl.UTF-8):	Statyczna wersja libexif
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
+Requires:	%{name}-devel%{?_isa} = %{epoch}:%{version}-%{release}
 Obsoletes:	libmnote-static < 0.6
 
 %description static
